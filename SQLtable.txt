@@ -1,0 +1,13 @@
+CREATE TABLE booking(
+    reference VARCHAR(255) NOT NULL PRIMARY KEY,
+    customerName TEXT NOT NULL,
+    phoneNumber INT(12) NOT NULL,
+    unitNumber TEXT,
+    streetNumber TEXT NOT NULL,
+    streetName TEXT NOT NULL,
+    suburb TEXT,
+    destinationSuburb TEXT,
+    pickupDate DATE NOT NULL,
+    pickupTime TIME NOT NULL,
+    status ENUM('assigned','unassigned') NOT NULL
+);
