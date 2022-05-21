@@ -1,0 +1,44 @@
+<HTML XMLns="http://www.w3.org/1999/xHTML"> 
+<html>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<html xmlns = "http://www.w3.org/1999/xhtml">
+    	 <script type="text/javascript" src="booking.js"></script>
+	 <script type="text/javascript" src="xhr.js"></script>
+
+	<link rel = "stylesheet" type = "text/css" href = "style.css"/>
+	
+<head>
+	<title>CabsOnline</title>
+</head>
+
+<body>
+<table><form>
+    <h1>Taxi Booking System</h1> </div>
+	
+	<p><label>Customer Name: <input type="text" name ="cname" id="cname" required="required" placeholder="Otto Leo" pattern="[A-Za-z ]{1,42}"/></label></p>	
+	<p><label>Phone Number:  <input type="text" name ="phone" id="phone" pattern="\d+" minlength="10" maxlength="12" placeholder="02*********" required="required"/></label></p>
+	
+	<p><h2>Pick-up Address</h2></p>
+	
+	<p><label>Unit Number: <input type="text" name ="unumber" id="unumber" title="Optional" placeholder="1A" pattern="[1-9A-Za-z ]{1,10}"/></label></p>	
+	<p><label>Street Number: <input type="text" name ="snumber" id="snumber" required="required"  placeholder="2" pattern="[1-9A-Za-z ]{1,15}"/></label></p>
+	<p><label>Street Name:  <input type="text" name ="stname" id="stname" required="required" placeholder="Speed St." pattern="[A-Za-z ]+"/></label></p>		
+	<p><label>Suburb:  <input type="text" name ="sbname" id="sbname" title="Optional" placeholder="Auckland" pattern="[A-Za-z ]+"/></label></p>
+		
+	<p><label>Pick-Up Date:  <input type="date" name = "date"  id="dateShow" required="required"/></label></p>
+	<p><label>Pick-Up Time:  <input type="time" name = "time" id="timeShow" required="required"/></label></p>
+	
+	<p><h2>Destination Address</h2></p>
+	
+	<p><label>Destination  Suburb: <input type="text" name ="dsbname" title="Optional" placeholder="Auckland" pattern="[A-Za-z ]+"/></label></p>			
+
+<input type="submit" name="submit" id="submit" onClick="getData('booking.php','targetDiv', name.value, phone.value, 
+snumber.value,sbname.value, stname.value,unumber.value,date.value, time.value,dsbname.value) " value = "Booking a Taxi">
+</form></table>
+<div id="targetDiv">
+ <p>The reference number will go here.</p>  
+<p name="reference"></p>	
+</div>
+</body>
+		
+</html>
